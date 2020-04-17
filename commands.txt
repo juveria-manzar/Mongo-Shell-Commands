@@ -1,4 +1,5 @@
 Mongo shell Mongo's cli.
+type mongo in command prompt.
 
 to view db's
         show dbs
