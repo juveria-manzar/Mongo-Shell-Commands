@@ -1,0 +1,43 @@
+Mongo shell Mongo's cli.
+
+to view db's
+        show dbs
+view collection in db
+        show collections
+to create a db or to use:
+            use dbname
+            use shell-ex
+command db 
+        returns the db that we are using
+show collections
+        returns objects. (like tables in sql db)
+db.users.insert({name:"Juveria",isHuman:true,hobbies:["sleeeeping","eating","coding","reading"]})
+        creates a collection users in current db and inserts the data
+db.users.find()
+        returns all data of collection 'user'
+
+db.users.find().pretty()
+        returns all data of collection 'user' formatted
+
+db.users.find({isHuman:true})
+        filtering
+
+db.users.update({name:"Juveria"},{name:"Juveria Manzar"})
+        updates name but deletes rest properties
+resetting...        
+db.users.update({name:"Juveria Manzar"},{name:"Juveria",isHuman:true,hobbies:["sleeeeping","eating","coding","reading"]})
+
+/updating but keeping other properties intact.
+        db.users.update({name:"Juveria"},{$set:{name:"Juveria Manzar"}})
+
+db.users.insert({name:"Junmx",isHuman:true,hobbies:["sleeeeping","eating","coding","reading"]})
+/removing
+db.users.remove({name:"Junmx"})
+
+db.users.drop()
+db.dropDatabase()
+
+
+
+
+
